@@ -2,7 +2,7 @@ import { gql } from "apollo-boost";
 
 export const GET_POKEMONS = gql`
   {
-    pokemons(first: 2) {
+    pokemons(first: 6) {
       id
       name
       image
@@ -11,8 +11,9 @@ export const GET_POKEMONS = gql`
       attacks {
         fast {
           name
-          damage
-          type
+        }
+        special {
+          name
         }
       }
     }
